@@ -1,11 +1,58 @@
 {
     "name": "Tile Tiger",
-    "action": {},
-    "manifest_version": 1,
-    "version": "0.1",
     "description": "Plays 2048 better than you",
-    "permissions": ["activeTab", "scripting"],
+    "manifest_version": 3,
+    "version": "0.1",
+    "icons": {
+        "16": "images/icon-16.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    },
     "background": {
-      "service_worker": "service-worker.js"
+        "service_worker": "service-worker.js"
+    },
+    "action": {
+        "default_title": "Tiger Tiger is active...",
+        "default_icon": {
+            "16": "images/icon-16.png",
+            "32": "images/icon-32.png",
+            "48": "images/icon-48.png",
+            "128": "images/icon-128.png"
+        }
+    },
+    "host_permissions": [
+        "https://*.play2048.co/"
+    ],
+    "permissions": [
+        "storage",
+        "scripting",
+        "activeTab"
+    ],
+    "commands": {
+        "leftarrow" : {
+            "suggested_key": {
+                 "default": "Alt+Shift+S" 
+            },
+            "description": "Save a link"
+        },
+        "rightarrow": {
+            "suggested_key": {
+                "default": "Alt+Shift+L"
+            },
+            "description": "Load a random link"
+        },
+        "uparrow": {
+            "suggested_key": {
+                 "default": "Alt+Shift+S" 
+            },
+            "description": "Save a link"
+        },
+        "downarrow": {
+            "suggested_key": {
+                "default": "Alt+Shift+L"
+            },
+            "description": "Load a random link"
+        }
     }
-  }
+}
