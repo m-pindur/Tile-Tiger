@@ -1,0 +1,11 @@
+{
+    "name": "Tile Tiger",
+    "action": {},
+    "manifest_version": 1,
+    "version": "0.1",
+    "description": "Plays 2048 better than you",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+      "service_worker": "service-worker.js"
+    }
+  }
